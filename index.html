@@ -8,14 +8,18 @@
     <link rel="stylesheet" href="main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body class="text-subtle" data-bs-theme="dark">
+<body class="text-subtle" data-bs-theme="dark" data-bs-spy="scroll" data-bs-target=".navbar">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <div class="align-middle bg-body-secondary pb-4 mb-5 navbar">
-            <h1 class=""><b>Fizika Fénytan</b></h1>
-            <ul class="navbar-nav me-auto mb-lg-0 list-group-horizontal">
+    <div class="align-middle bg-body-secondary pb-4 mb-5 navbar sticky-top">
+            <h1 class="ms-2"><b>Fizika Fénytan</b></h1>
+            <ul class="navbar-nav me-auto mb-lg-0 list-group-horizontal ">
                 <li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#tori">Történelem</a></li>
                 <li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#foldimeres">1. földi mérés</a></li>
                 <li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#fenyforrasok">Fényforrások</a></li>
+                <li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#fenysebesseg">Fénysebesség</a></li>
+                <li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#muveszet_tudomany">Művészetek, Tudomány(informatika)</a></li>
+                <li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#kerdoiv">Kérdőív</a></li>
+
             </ul>
     </div>
 
@@ -123,24 +127,46 @@
         <div class="col">
             <div class="card h-100 p-3">
                 <div class="card-body">
-                    <h5 class="card-title">1920-as évek - A kvantumfizika válasza</h5>
+                    <h5 class="card-title">1920-as évek - A kvantumfizika</h5>
                     <p class="card-text">A kvantummechanika kialakulása megmutatta, hogy a fény egyszerre rendelkezik hullám- és részecsketulajdonságokkal. Ez a hullám-részecske kettősség a modern fizika egyik alapelve.</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="d-flex justify-content-between border rounded-2 p-2 mt-5">
-    <h2 class="text-center mt-5 align-middle mx-auto" id="foldimeres">A fénysebesség <br>1. földi méréséről</h2>
-        <p class="card-text"><i>"Az első sikeres „földi” mérést Hippolyte Fizeau<br>
-(1819–1896) francia fizikus 1849-ben végezte el.<br>
-Fénysugarat bocsátott át egy forgó fogaskerék két<br>
-foga között egy távoli tükörre merőlegesen. viszszavert <br>
-fénysugár bizonyos feltételek mellett fognak<br>
-ütközött, illetve egy fogközön haladt át.<br>
-Ezt vizsgálva mérte meg a fénysebességet."</i></p>
-    <img src="fenysebmeres.png" class="mx-auto img-fluid">
+    
+<div class="container border rounded-2 p-4 mt-5">
+  <div class="row align-items-center g-4">
 
+    <div class="col-12 col-lg-4 text-center">
+      <h2 id="foldimeres">
+        A fénysebesség <br>
+        1. földi méréséről
+      </h2>
     </div>
+
+    <div class="col-12 col-lg-4">
+      <p class="card-text">
+        <i>
+          "Az első sikeres „földi” mérést Hippolyte Fizeau (1819–1896)
+          francia fizikus 1849-ben végezte el.
+          Fénysugarat bocsátott át egy forgó fogaskerék két
+          foga között egy távoli tükörre merőlegesen.
+          A visszavert fénysugár bizonyos feltételek mellett
+          ütközött, illetve egy fogközön haladt át.
+          Ezt vizsgálva mérte meg a fénysebességet."
+        </i>
+      </p>
+    </div>
+
+    <div class="col-12 col-lg-4 text-center">
+      <img src="fenysebmeres.png"
+           class="img-fluid rounded"
+           alt="Fizeau fénysebesség mérése">
+    </div>
+
+  </div>
+</div>
+    
 <div class="row text-center mt-5" id="fenyforrasok">
     <div class="col card">
         <div class="card-body">
@@ -178,9 +204,57 @@ ges fényforrásnak tekintjük."</i>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col card m-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Pontszerű fényforrások</h5>
+                        <p class="card-text">
+                            Pontszerű fényforrásokról akkor beszélünk, ha a fényforrás mérete sokkal kisebb a jelenségel kapcsolatos egyéb távolságoknál.
+                        </p>
+                    </div>
+                </div>
+                <div class="col card m-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Kiterjedt fényforrások</h5>
+                        <p class="card-text">
+                            Kiterjedt fényforrásokról akkor beszélünk, ha az elhanyagolás nem engedhető meg a pontszerú fényforrásokkal ellentétben
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+<div class="">
+<section id="fenysebesseg" class="mt-5">
+    <h2>A fénysebesség</h2>
+    <p>A fénysebesség mérése több féle módszerrel történt. A fény vákuumbeli pontos sebessége: 299 792 458 m/s</p>
+    <p>A vákuumbeli fénysebesség <b>határsebesség</b> tehát semmilyen anyagi objektum nem haladhat ennél nagyobb sebességel. <br>Ez az előbb említett Einstein relativitáselméletében(1905) fogalmazódott meg.</p>
+</section>
+
+<section id="muveszet_tudomany" class="mt-5">
+    <h2>A művészeti szerepe a fénysebességnek, fénynek</h2>
+    <ul>
+        <li>Elérhetetlenségi metafóra</li>
+        <li>Emberi léten túli jelkép</li>
+        <li>Fény szerepe:<ul class="list-group-horizontal">
+            <li>Térhatás</li>
+            <li>Hangsúly</li>
+            <li>Hangulat</li>
+            <li>Fényszobrászat, fényművészet</li>
+        </ul></li>
+    </ul>
+    <h2>A tudományi(informatikai) szerepe a fénysebességnek, fénynek</h2>
+    <h3 >Informatika korlátozva a fénysebesség által</h3>
+    <ul>
+        
+        <li>Adatvitel</li>
+        <li>Műholdas kommunikáció</li>
+        <li>Hálózati késleltetés</li>
+    </ul>
+</section>
+
+<iframe id="kerdoiv" src="https://docs.google.com/forms/d/e/1FAIpQLSfnh_zY87YkISg59Ysi9zrz9eTMYHwk6Y75wHYA9SEYA4XOfg/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
 </div>
 
 </body>
