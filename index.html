@@ -1,291 +1,315 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Fizika - Optika</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
-<body class="text-subtle" data-bs-theme="dark" data-bs-spy="scroll" data-bs-target=".navbar">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <div class="align-middle bg-body-secondary pb-4 mb-5 navbar sticky-top">
-            <h1 class="ms-2"><b>Fizika Fénytan</b></h1>
-            <ul class="navbar-nav me-auto mb-lg-0 list-group-horizontal ">
-                <li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#tori">Történelem</a></li>
-                <li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#foldimeres">1. földi mérés</a></li>
-                <li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#fenyforrasok">Fényforrások</a></li>
-                <li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#fenysebesseg">Fénysebesség</a></li>
-                <li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#muveszet_tudomany">Művészetek, Tudomány(informatika)</a></li>
-                <li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#kerdoiv">Kérdőív</a></li>
-
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </head>
+  <body class="text-subtle" data-bs-theme="dark" data-bs-spy="scroll" data-bs-target=".navbar" id="bg">
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> -->
+    <!-- <div class="align-middle bg-body-secondary pb-4 mb-5 navbar sticky-top"><h1 class="ms-2"><b>Fizika Fénytan</b></h1><ul class="navbar-nav me-auto mb-lg-0 list-group-horizontal "><li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#tori">Történelem</a></li><li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#foldimeres">1. földi mérés</a></li><li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#fenyforrasok">Fényforrások</a></li><li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#fenysebesseg">Fénysebesség</a></li><li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#muveszet_tudomany">Művészetek, Tudomány(informatika)</a></li><li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#kerdoiv">Kérdőív</a></li></ul></div> -->
+    <!-- <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary"><div class="container-fluid"><a class="navbar-brand" href="#">Fényoptika</a><button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#no" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav me-auto mb-2 mb-lg-0"><li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#tori">Történelem</a></li><li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#foldimeres">1. földi mérés</a></li><li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#fenyforrasok">Fényforrások</a></li><li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#fenysebesseg">Fénysebesség</a></li><li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#muveszet_tudomany">Művészetek, Tudomány</a></li></ul></div></div></nav> -->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Fényoptika</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Fényoptika</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item m-2 p-2 border rounded-2">
+                <a class="nav-link" href="#tori">Történelem</a>
+              </li>
+              <li class="nav-item m-2 p-2 border rounded-2">
+                <a class="nav-link" href="#foldimeres">1. földi mérés</a>
+              </li>
+              <li class="nav-item m-2 p-2 border rounded-2">
+                <a class="nav-link" href="#fenyforrasok">Fényforrások</a>
+              </li>
+              <li class="nav-item m-2 p-2 border rounded-2">
+                <a class="nav-link" href="#fenysebesseg">Fénysebesség</a>
+              </li>
+              <li class="nav-item m-2 p-2 border rounded-2">
+                <a class="nav-link" href="#muveszet_tudomany">Művészetek, Tudomány</a>
+              </li>
+              <li class="nav-item m-2 p-2 border rounded-2">
+                <a class="nav-link" href="./forrasok.html">Források</a>
+              </li>
+              <li class="nav-item m-2 p-2 border rounded-2">
+                <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfnh_zY87YkISg59Ysi9zrz9eTMYHwk6Y75wHYA9SEYA4XOfg/viewform?usp=header">Kérdőív</a>
+              </li>
             </ul>
-    </div>
-
-
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary"><div class="container-fluid"><a class="navbar-brand" href="#">Navbar</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav me-auto mb-2 mb-lg-0"><li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#tori">Történelem</a></li><li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#foldimeres">1. földi mérés</a></li><li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#fenyforrasok">Fényforrások</a></li><li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#fenysebesseg">Fénysebesség</a></li><li class="nav-item ms-4 p-2 border rounded-2"><a class="nav-link" href="#muveszet_tudomany">Művészetek, Tudomány(informatika)</a></li></div></div></nav> -->
     <h2 class="text-center mr-4" id="tori">A fény történelme</h2>
     <div class="container py-5">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         <div class="col">
-            <div class="card h-100 p-3">
-                <div class="card-body">
-                    <h5 class="card-title">Arisztotelész</h5>
-                    <p class="card-text">Arisztotelész úgy vélte, hogy a fény terjedése azonnali, nincs szüksége időre. Ez az elképzelés élt több ezer évig</p>
-                </div>
+          <div class="card h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">Arisztotelész</h5>
+              <p class="card-text">Arisztotelész úgy vélte, hogy a fény terjedése azonnali, nincs szüksége időre. Ez az elképzelés élt több ezer évig</p>
             </div>
+          </div>
         </div>
         <div class="col">
-            <div class="card h-100 p-3">
-                <div class="card-body">
-                    <h5 class="card-title">1590 - A mikroszkóp megjelenése</h5>
-                    <p class="card-text">Zacharias Janssen nevéhez kötik a mikroszkóp feltalálását. Az eszköz új távlatokat nyitott a mikrovilág megfigyelésében.</p>
-                </div>
+          <div class="card h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">1590 - A mikroszkóp megjelenése</h5>
+              <p class="card-text">Zacharias Janssen nevéhez kötik a mikroszkóp feltalálását. Az eszköz új távlatokat nyitott a mikrovilág megfigyelésében.</p>
             </div>
+          </div>
         </div>
         <div class="col">
-            <div class="card h-100 p-3">
-                <div class="card-body">
-                    <h5 class="card-title">1609-1611 - A távcső</h5>
-                    <p class="card-text">Galileo Galilei 1609-ben csillagászati megfigyelésekre használta a távcsövet, majd Johannes Kepler 1611-ben továbbfejlesztette.</p>
-                </div>
+          <div class="card h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">1609-1611 - A távcső</h5>
+              <p class="card-text">Galileo Galilei 1609-ben csillagászati megfigyelésekre használta a távcsövet, majd Johannes Kepler 1611-ben továbbfejlesztette.</p>
             </div>
+          </div>
         </div>
         <div class="col">
-            <div class="card h-100 p-3">
-                <div class="card-body">
-                    <h5 class="card-title">1676 - A fénysebesség első mérése</h5>
-                    <p class="card-text">Olaf Römer a Jupiter Io holdjának fogyatkozásait vizsgálva kimutatta, hogy a fény sebessége véges.</p>
-                </div>
+          <div class="card h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">1676 - A fénysebesség első mérése</h5>
+              <p class="card-text">Olaf Römer a Jupiter Io holdjának fogyatkozásait vizsgálva kimutatta, hogy a fény sebessége véges.</p>
             </div>
+          </div>
         </div>
         <div class="col">
-            <div class="card h-100 p-3">
-                <div class="card-body">
-                    <h5 class="card-title">1687 - Huygens hullámelmélete</h5>
-                    <p class="card-text">Christiaan Huygens a fényt longitudinális hullámként írta le. </p>
-                </div>
+          <div class="card h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">1687 - Huygens hullámelmélete</h5>
+              <p class="card-text">Christiaan Huygens a fényt longitudinális hullámként írta le. </p>
             </div>
+          </div>
         </div>
         <div class="col">
-            <div class="card h-100 p-3">
-                <div class="card-body">
-                    <h5 class="card-title">Newton részecskemodellje</h5>
-                    <p class="card-text">Isaac Newton szerint a fény apró, gyorsan mozgó részecskékből áll. Ez az elképzelés hosszú időre háttérbe szorította a hullámelméletet.</p>
-                </div>
+          <div class="card h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">Newton részecskemodellje</h5>
+              <p class="card-text">Isaac Newton szerint a fény apró, gyorsan mozgó részecskékből áll. Ez az elképzelés hosszú időre háttérbe szorította a hullámelméletet.</p>
             </div>
+          </div>
         </div>
         <div class="col">
-            <div class="card h-100 p-3">
-                <div class="card-body">
-                    <h5 class="card-title">1817 - Interferencia és a transzverzális hullám</h5>
-                    <p class="card-text">Thomas Young és Augustin-Jean Fresnel kimutatták a fény interferenciáját, és a fényt transzverzális hullámként értelmezték. Fresnel vezette be az „éter” fogalmát mint feltételezett közvetítő közeget.</p>
-                </div>
+          <div class="card h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">1817 - Interferencia és a transzverzális hullám</h5>
+              <p class="card-text">Thomas Young és Augustin-Jean Fresnel kimutatták a fény interferenciáját, és a fényt transzverzális hullámként értelmezték. Fresnel vezette be az „éter” fogalmát mint feltételezett közvetítő közeget.</p>
             </div>
+          </div>
         </div>
         <div class="col">
-            <div class="card h-100 p-3">
-                <div class="card-body">
-                    <h5 class="card-title">1849 -Az első földi mérés</h5>
-                    <p class="card-text">Hippolyte Fizeau forgó fogaskerék segítségével laboratóriumi körülmények között is megmérte a fénysebességet.</p>
-
-                </div>
+          <div class="card h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">1849 -Az első földi mérés</h5>
+              <p class="card-text">Hippolyte Fizeau forgó fogaskerék segítségével laboratóriumi körülmények között is megmérte a fénysebességet.</p>
             </div>
+          </div>
         </div>
         <div class="col">
-            <div class="card h-100 p-3">
-                <div class="card-body">
-                    <h5 class="card-title">1865 - Az elektromágneses elmélet</h5>
-                    <p class="card-text">James Clerk Maxwell elmélete szerint a fény elektromágneses hullám.</p>
-                </div>
+          <div class="card h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">1865 - Az elektromágneses elmélet</h5>
+              <p class="card-text">James Clerk Maxwell elmélete szerint a fény elektromágneses hullám.</p>
             </div>
+          </div>
         </div>
         <div class="col">
-            <div class="card h-100 p-3">
-                <div class="card-body">
-                    <h5 class="card-title">1888 - Elektromágneses hullámok kimutatása</h5>
-                    <p class="card-text">Heinrich Hertz kísérletileg is igazolta az elektromágneses hullámok létezését, megerősítve Maxwell elméletét.</p>
-                </div>
+          <div class="card h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">1888 - Elektromágneses hullámok kimutatása</h5>
+              <p class="card-text">Heinrich Hertz kísérletileg is igazolta az elektromágneses hullámok létezését, megerősítve Maxwell elméletét.</p>
             </div>
+          </div>
         </div>
         <div class="col">
-            <div class="card h-100 p-3">
-                <div class="card-body">
-                    <h5 class="card-title">1905 - Fény mint részecske</h5>
-                    <p class="card-text">Albert Einstein a fényelektromos jelenség magyarázatakor a fényt energiaadagok (fotonok) áramaként írta le. Ezzel újra előtérbe került a részecsketermészet.</p>
-                </div>
+          <div class="card h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">1905 - Fény mint részecske</h5>
+              <p class="card-text">Albert Einstein a fényelektromos jelenség magyarázatakor a fényt energiaadagok (fotonok) áramaként írta le. Ezzel újra előtérbe került a részecsketermészet.</p>
             </div>
+          </div>
         </div>
         <div class="col">
-            <div class="card h-100 p-3">
-                <div class="card-body">
-                    <h5 class="card-title">1905 - A relativitáselmélet</h5>
-                    <p class="card-text">Einstein speciális relativitáselmélete kimondta: a fény vákuumbeli sebessége határsebesség, amelyet semmilyen test nem haladhat meg.</p>
-                </div>
+          <div class="card h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">1905 - A relativitáselmélet</h5>
+              <p class="card-text">Einstein speciális relativitáselmélete kimondta: a fény vákuumbeli sebessége határsebesség, amelyet semmilyen test nem haladhat meg.</p>
             </div>
+          </div>
         </div>
         <div class="col">
-            <div class="card h-100 p-3">
-                <div class="card-body">
-                    <h5 class="card-title">1920-as évek - A kvantumfizika</h5>
-                    <p class="card-text">A kvantummechanika kialakulása megmutatta, hogy a fény egyszerre rendelkezik hullám- és részecsketulajdonságokkal. Ez a hullám-részecske kettősség a modern fizika egyik alapelve.</p>
-                </div>
+          <div class="card h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">1920-as évek - A kvantumfizika</h5>
+              <p class="card-text">A kvantummechanika kialakulása megmutatta, hogy a fény egyszerre rendelkezik hullám- és részecsketulajdonságokkal. Ez a hullám-részecske kettősség a modern fizika egyik alapelve.</p>
             </div>
+          </div>
         </div>
-    </div>
-    
-<div class="container border rounded-2 p-4 mt-5">
-  <div class="row align-items-center g-4">
-
-    <div class="col-12 col-lg-4 text-center">
-      <h2 id="foldimeres">
-        A fénysebesség <br>
-        1. földi méréséről
-      </h2>
-    </div>
-
-    <div class="col-12 col-lg-4">
-      <p class="card-text">
-        <i>
-          "Az első sikeres „földi” mérést Hippolyte Fizeau (1819–1896)
-          francia fizikus 1849-ben végezte el.
-          Fénysugarat bocsátott át egy forgó fogaskerék két
-          foga között egy távoli tükörre merőlegesen.
-          A visszavert fénysugár bizonyos feltételek mellett
-          ütközött, illetve egy fogközön haladt át.
-          Ezt vizsgálva mérte meg a fénysebességet."
-        </i>
-      </p>
-    </div>
-
-    <div class="col-12 col-lg-4 text-center">
-      <img src="fenysebmeress.png"
-           class="img-fluid rounded"
-           alt="Fizeau fénysebesség mérése">
-    </div>
-
-  </div>
-</div>
-    
-<div class="row text-center mt-5" id="fenyforrasok">
-    <div class="col card">
-        <div class="card-body">
+      </div>
+      <div class="container border rounded-2 p-4 mt-5">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-4 text-center">
+            <h2 id="foldimeres"> A fénysebesség <br> 1. földi méréséről </h2>
+          </div>
+          <div class="col-12 col-lg-4">
+            <p class="card-text">
+              <i> "Az első sikeres „földi” mérést Hippolyte Fizeau (1819–1896) francia fizikus 1849-ben végezte el. Fénysugarat bocsátott át egy forgó fogaskerék két foga között egy távoli tükörre merőlegesen. A visszavert fénysugár bizonyos feltételek mellett ütközött, illetve egy fogközön haladt át. Ezt vizsgálva mérte meg a fénysebességet." </i>
+            </p>
+          </div>
+          <div class="col-12 col-lg-4 text-center">
+            <img src="fenysebmeress.png" class="img-fluid rounded" alt="Fizeau fénysebesség mérése">
+          </div>
+        </div>
+      </div>
+      <div class="row text-center mt-5" id="fenyforrasok">
+        <div class="col card">
+          <div class="card-body">
             <h2 class="card-title ">A fényforrások</h2>
             <p class="card-text">Minden olyan test amiről a fény a szemünkbe jut fényforrás.</p>
             <div class="row">
-                <div class="col card m-2">
-                    <div class="card-body">
-                        <h5 class="card-title">Elsődleges fényforrások</h5>
-                        <p class="card-text">Azok a fényforrások, amelyek önmaguk bocsátanak ki fényt. Például:
-                            <ul>
-                                <li>LEDek</li>
-                                <li>Nap</li>
-                                <li>Gyertya</li>
-                                <li>Izzólámpa</li>
-                                <li>Fluoreszkáló mintázatok</li>
-                                <img class="img-fluid rounded" src="sun.png" alt=""  height="400">
-                            </ul>
-                            <i>"Az optikai kísérletekben erősen
-megvilágított kör alakú nyílást vagy rést is elsődle
-ges fényforrásnak tekintjük."</i>
-                        </p>
-                    </div>
+              <div class="col card m-2">
+                <div class="card-body">
+                  <h5 class="card-title">Elsődleges fényforrások</h5>
+                  <p class="card-text">Azok a fényforrások, amelyek önmaguk bocsátanak ki fényt. Például:
+                  <ul>
+                    <li>LEDek</li>
+                    <li>Nap</li>
+                    <li>Gyertya</li>
+                    <li>Izzólámpa</li>
+                    <li>Fluoreszkáló mintázatok</li>
+                    <img class="img-fluid rounded" src="sun.png" alt="" height="400">
+                  </ul>
+                  <i>"Az optikai kísérletekben erősen megvilágított kör alakú nyílást vagy rést is elsődle ges fényforrásnak tekintjük."</i>
+                  </p>
                 </div>
-                <div class="col card m-2">
-                    <div class="card-body">
-                        <h5 class="card-title">Másodlagos fényforrások</h5>
-                        <p class="card-text">A testek visszaverik a fény egy részét, ezáltal másodlagos fényforrássá válnak. Például:
-                            <ul>
-                                <li>Hold</li>
-                                <li>Bolygók</li>
-                                <li><i>"Legkülönbözőbb tárgyaink"</i></li>
-                                <img class="img-fluid rounded" src="moon.png" alt="" height="400">
-                            </ul>
-                        </p>
-                    </div>
+              </div>
+              <div class="col card m-2">
+                <div class="card-body">
+                  <h5 class="card-title">Másodlagos fényforrások</h5>
+                  <p class="card-text">A testek visszaverik a fény egy részét, ezáltal másodlagos fényforrássá válnak. Például:
+                  <ul>
+                    <li>Hold</li>
+                    <li>Bolygók</li>
+                    <li>
+                      <i>"Legkülönbözőbb tárgyaink"</i>
+                    </li>
+                    <img class="img-fluid rounded" src="moon.png" alt="" height="400">
+                  </ul>
+                  </p>
                 </div>
+              </div>
             </div>
             <div class="row">
-                <div class="col card m-2">
-                    <div class="card-body">
-                        <h5 class="card-title">Pontszerű fényforrások</h5>
-                        <p class="card-text">
-                            Pontszerű fényforrásokról akkor beszélünk, ha a fényforrás mérete sokkal kisebb a jelenségel kapcsolatos egyéb távolságoknál.
-                        </p>
-                    </div>
+              <div class="col card m-2">
+                <div class="card-body">
+                  <h5 class="card-title">Pontszerű fényforrások</h5>
+                  <p class="card-text"> Pontszerű fényforrásokról akkor beszélünk, ha a fényforrás mérete sokkal kisebb a jelenségel kapcsolatos egyéb távolságoknál. </p>
                 </div>
-                <div class="col card m-2">
-                    <div class="card-body">
-                        <h5 class="card-title">Kiterjedt fényforrások</h5>
-                        <p class="card-text">
-                            Kiterjedt fényforrásokról akkor beszélünk, ha az elhanyagolás nem engedhető meg a pontszerú fényforrásokkal ellentétben
-                        </p>
-                    </div>
+              </div>
+              <div class="col card m-2">
+                <div class="card-body">
+                  <h5 class="card-title">Kiterjedt fényforrások</h5>
+                  <p class="card-text"> Kiterjedt fényforrásokról akkor beszélünk, ha az elhanyagolás nem engedhető meg a pontszerú fényforrásokkal ellentétben </p>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+      <div class="">
+        <section id="fenysebesseg" class="mt-5">
+          <h2>A fénysebesség</h2>
+          <p>A fénysebesség mérése több féle módszerrel történt. A fény vákuumbeli pontos sebessége: 299 792 458 m/s</p>
+          <p>A vákuumbeli fénysebesség <b>határsebesség</b> tehát semmilyen anyagi objektum nem haladhat ennél nagyobb sebességel. <br>Ez az előbb említett Einstein relativitáselméletében(1905) fogalmazódott meg. </p>
+        </section>
+        <section id="muveszet_tudomany" class="mt-5">
+          <h2>A művészeti szerepe a fénysebességnek, fénynek</h2>
+          <div class="row">
+            <ul class="col-12 col-lg-4">
+              <li>Elérhetetlenségi metafóra</li>
+              <li>Emberi léten túli jelkép</li>
+              <li>Fény szerepe: <ul class="list-group-horizontal">
+                  <li>Térhatás</li>
+                  <li>Hangsúly</li>
+                  <li>Hangulat</li>
+                  <li>Fényszobrászat, fényművészet</li>
+                  <li>Fotográfia</li>
+                  <li>Épitészet</li>
+                </ul>
+              </li>
+            </ul>
+            <div id="carouselExample" class="carousel slide col-12 col-lg-4 ">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="light_sculpt_1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="light_sculpt_2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="light_sculpt_3.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon white" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon white" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+      </div>
+      <h2>A tudományi szerepe a fénysebességnek, fénynek</h2>
+      <h3>Informatika</h3>
+      <ul>
+        <li>Adatvitel, Hálózati késleltetés:</li>
+        <div class="ms-4 row">
+          <p class="col-12 col-lg-4">
+            <br>A világ legtöbb adatforgalma optikai kábeleken keresztül történik. <br>Az egész világot behálózzák a tenger alatti optikai kábelek. <br>Ezek a kábelek hatalmas nagy sávszélességgel rendelkeznek(Tbps), <br> és kb 60-100km-es távolságokon lehet az adatot vinni erősítők nélkül. <br> Optikai kábelekben a <b>fény sebessége</b> a vákuumbeli sebességének <b>kb. 2/3-a.</b>
+            <br> Budapestől New Yorkig egyírányú kommunikáció minimum 35ms-es késleltetéssel jár, <br> nem figyelembevéve a jelfeldolgozást(ill. hogy a táv légvonalban volt nézve)
+          </p>
+          <img src="optikaikabel.png" class="col-12 col-lg-4 img-fluid">
+        </div>
+        <li>Műholdas kommunikáció: </li>
+        <div class="ms-4 row">
+          <p class="col-12 col-lg-4">
+            <br> A műholdas kommunikáció rádióhullámokkal működik, amelyek a fényhez hasonlóan <b>fénysebességgel</b> terjednek. <br> Geostacionárius műholdak kb. <b>35 786 km</b> magasságban keringenek a Föld felett. <br> Egy adatcsomagnak oda-vissza több mint <b>140 000 km</b>-t kell megtennie. <br> Ezért GEO műholdas internetnél érezhető a válaszidő (pl. videóhívásnál). <br> Az alacsony Föld körüli pályán (LEO) működő rendszerek pl. a Starlink <br> csak <b>500-1200 km</b> magasságban keringenek. <br> Itt a fizikai késleltetés már csak néhány tíz ms, <br> ami közelít a földi optikai hálózatok teljesítményéhez.
+          </p>
+          <img src="muhold.jpg" class="col-12 col-lg-4 img-fluid">
+      </ul>
+      <h3>Biológia</h3>
+      <ul>
+        <li>Fotoszintézis: <div class="ms-4 row">
+            <p class="col-12 col-lg-4">
+              <br> A fotoszintézis egy biológiai folyamat, amely során a növények, algák és egyes baktériumok a napfény energiáját felhasználva átalakítják a fényenergiát kémiai energiává. <br> Ennek során víz és szén-dioxid segítségével szerves anyagok, például cukrok képződnek, miközben oxigén is felszabadul a légkörbe mint melléktermék. <br> A folyamat főként a zöld levelekben található kloroplasztiszokban zajlik le, ahol a klorofill elnyeli a fényt, és ez indítja el a kémiai reakciókat. <br>
+            </p>
+            <img src="fotoszint.png" class="col-12 col-lg-4 img-fluid">
+          </div>
+        </li>
+      </ul>
+      </section>
     </div>
-</div>
-<div class="">
-<section id="fenysebesseg" class="mt-5">
-    <h2>A fénysebesség</h2>
-    <p>A fénysebesség mérése több féle módszerrel történt. A fény vákuumbeli pontos sebessége: 299 792 458 m/s</p>
-    <p>A vákuumbeli fénysebesség <b>határsebesség</b> tehát semmilyen anyagi objektum nem haladhat ennél nagyobb sebességel. <br>Ez az előbb említett Einstein relativitáselméletében(1905) fogalmazódott meg.</p>
-</section>
-
-<section id="muveszet_tudomany" class="mt-5">
-    <h2>A művészeti szerepe a fénysebességnek, fénynek</h2>
-    <div class="row">
-    <ul class="col">
-        <li>Elérhetetlenségi metafóra</li>
-        <li>Emberi léten túli jelkép</li>
-        <li>Fény szerepe:<ul class="list-group-horizontal">
-            <li>Térhatás</li>
-            <li>Hangsúly</li>
-            <li>Hangulat</li>
-            <li>Fényszobrászat, fényművészet</li>
-        </ul></li>
-    </ul>
-<div id="carouselExample" class="carousel slide col">
-      <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="light_sculpt_1.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="light_sculpt_2.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="light_sculpt_3.jpg" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon white" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon white" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-</div>
-    </div>
-    <h2>A tudományi(informatikai) szerepe a fénysebességnek, fénynek</h2>
-    <h3 >Informatika korlátozva a fénysebesség által</h3>
-    <ul>
-        
-        <li>Adatvitel</li>
-        <li>Műholdas kommunikáció</li>
-        <li>Hálózati késleltetés</li>
-    </ul>
-</section>
-
-<iframe id="kerdoiv" src="https://docs.google.com/forms/d/e/1FAIpQLSfnh_zY87YkISg59Ysi9zrz9eTMYHwk6Y75wHYA9SEYA4XOfg/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
-</div>
-
-</body>
+  </body>
 </html>
